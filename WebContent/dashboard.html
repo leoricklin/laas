@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Logging as a Service</title>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <script src="js/jquery-1.6.1.min.js"></script>
+   <script type="text/javascript" src="js/canvasjs.min.js"></script>
+   <script type="text/javascript">
+   window.onload = function () {
+    // <chart>
+    var charta1 = new CanvasJS.Chart("chartContainera1",
+    {
+      title:{
+        text: "Event Counts",
+      },
+      data: [
+      {// <series>
+        type: "line",
+        showInLegend: "true",
+        markerType: "circle",
+        legendText: "Events",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 6925 },
+        { x: new Date(2013, 04, 28), y: 7801 },
+        { x: new Date(2013, 04, 29), y: 13630 },
+        { x: new Date(2013, 04, 30), y: 13630 },
+        { x: new Date(2013, 04, 31), y: 46280 },
+        { x: new Date(2013, 05, 01), y: 64260, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 13462 },
+        { x: new Date(2013, 05, 03), y: 18991 },
+        { x: new Date(2013, 05, 04), y: 5765 },
+        { x: new Date(2013, 05, 05), y: 4042 },
+        { x: new Date(2013, 05, 06), y: 2291 },
+        { x: new Date(2013, 05, 07), y: 4798 },
+        { x: new Date(2013, 05, 08), y: 278 },
+        { x: new Date(2013, 05, 09), y: 7776 },
+        { x: new Date(2013, 05, 10), y: 14213 },
+        { x: new Date(2013, 05, 11), y: 94 },
+        { x: new Date(2013, 05, 12), y: 1444 },
+        { x: new Date(2013, 05, 13), y: 1935 },
+        { x: new Date(2013, 05, 14), y: 783 },
+        ]
+      }, // </series>
+      {// <series>
+        type: "line",
+        showInLegend: "true",
+        markerType: "circle",
+        legendText: "Login Failed for root",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 2155 },
+        { x: new Date(2013, 04, 28), y: 2163 },
+        { x: new Date(2013, 04, 29), y: 2205 },
+        { x: new Date(2013, 04, 30), y: 934 },
+        { x: new Date(2013, 04, 31), y: 5181 },
+        { x: new Date(2013, 05, 01), y: 17185, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 4214 },
+        { x: new Date(2013, 05, 03), y: 1740 },
+        { x: new Date(2013, 05, 04), y: 883 },
+        { x: new Date(2013, 05, 05), y: 101 },
+        { x: new Date(2013, 05, 06), y: 678 },
+        { x: new Date(2013, 05, 07), y: 1313 },
+        { x: new Date(2013, 05, 08), y: 46 },
+        { x: new Date(2013, 05, 09), y: 727 },
+        { x: new Date(2013, 05, 10), y: 2433 },
+        { x: new Date(2013, 05, 11), y: 28 },
+        { x: new Date(2013, 05, 12), y: 281 },
+        { x: new Date(2013, 05, 13), y: 320 },
+        { x: new Date(2013, 05, 14), y: 199 },
+        ]
+      }, // </series>
+      ]
+    });
+    charta1.render(); // </chart>
+    // <chart>
+    var charta2 = new CanvasJS.Chart("chartContainera2",
+    {
+      title:{
+        text: "Data Received",
+      },
+      data: [
+      {// <series>
+        type: "column",
+        showInLegend: "true",
+        legendText: "KB Received",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 458708/1048576 },
+        { x: new Date(2013, 04, 28), y: 518516/1048576 },
+        { x: new Date(2013, 04, 29), y: 960267/1048576 },
+        { x: new Date(2013, 04, 30), y: 717958/1048576 },
+        { x: new Date(2013, 04, 31), y: 3362935/1048576 },
+        { x: new Date(2013, 05, 01), y: 4741689/1048576, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 909553/1048576 },
+        { x: new Date(2013, 05, 03), y: 1371719/1048576 },
+        { x: new Date(2013, 05, 04), y: 411588/1048576 },
+        { x: new Date(2013, 05, 05), y: 270573/1048576 },
+        { x: new Date(2013, 05, 06), y: 161075/1048576 },
+        { x: new Date(2013, 05, 07), y: 369665/1048576 },
+        { x: new Date(2013, 05, 08), y: 19866/1048576 },
+        { x: new Date(2013, 05, 09), y: 555783/1048576 },
+        { x: new Date(2013, 05, 10), y: 1003551/1048576 },
+        { x: new Date(2013, 05, 11), y: 6412/1048576 },
+        { x: new Date(2013, 05, 12), y: 96904/1048576 },
+        { x: new Date(2013, 05, 13), y: 135492/1048576 },
+        { x: new Date(2013, 05, 14), y: 53742/1048576 },
+        ]
+      }, // </series>
+      ]
+    });
+    charta2.render(); // </chart>
+    // <chart>
+    var chartb1 = new CanvasJS.Chart("chartContainerb1",
+    {
+      title:{
+        text: "Event Counts",
+      },
+      data: [
+      {// <series>
+        type: "line",
+        showInLegend: "true",
+        markerType: "circle",
+        legendText: "Events",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 645 },
+        { x: new Date(2013, 04, 28), y: 1126 },
+        { x: new Date(2013, 04, 29), y: 846 },
+        { x: new Date(2013, 04, 30), y: 5678 },
+        { x: new Date(2013, 04, 31), y: 8638 },
+        { x: new Date(2013, 05, 01), y: 53636 },
+        { x: new Date(2013, 05, 02), y: 58666, indexLabel: "highest" },
+        { x: new Date(2013, 05, 03), y: 3084 },
+        { x: new Date(2013, 05, 04), y: 9703 },
+        { x: new Date(2013, 05, 05), y: 6110 },
+        { x: new Date(2013, 05, 06), y: 1129 },
+        { x: new Date(2013, 05, 07), y: 4163 },
+        { x: new Date(2013, 05, 08), y: 180 },
+        { x: new Date(2013, 05, 09), y: 4035 },
+        { x: new Date(2013, 05, 10), y: 20065 },
+        { x: new Date(2013, 05, 11), y: 207 },
+        { x: new Date(2013, 05, 12), y: 408 },
+        { x: new Date(2013, 05, 13), y: 10312 },
+        { x: new Date(2013, 05, 14), y: 792 },
+        ]
+      }, // </series>
+      {// <series>
+        type: "line",
+        showInLegend: "true",
+        markerType: "circle",
+        legendText: "Login Failed for root",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 186 },
+        { x: new Date(2013, 04, 28), y: 115 },
+        { x: new Date(2013, 04, 29), y: 76 },
+        { x: new Date(2013, 04, 30), y: 923 },
+        { x: new Date(2013, 04, 31), y: 441 },
+        { x: new Date(2013, 05, 01), y: 2608 },
+        { x: new Date(2013, 05, 02), y: 20728, indexLabel: "highest" },
+        { x: new Date(2013, 05, 03), y: 624 },
+        { x: new Date(2013, 05, 04), y: 1452 },
+        { x: new Date(2013, 05, 05), y: 111 },
+        { x: new Date(2013, 05, 06), y: 344 },
+        { x: new Date(2013, 05, 07), y: 856 },
+        { x: new Date(2013, 05, 08), y: 29 },
+        { x: new Date(2013, 05, 09), y: 501 },
+        { x: new Date(2013, 05, 10), y: 2625 },
+        { x: new Date(2013, 05, 11), y: 62 },
+        { x: new Date(2013, 05, 12), y: 123 },
+        { x: new Date(2013, 05, 13), y: 1051 },
+        { x: new Date(2013, 05, 14), y: 199 },
+        ]
+      }, // </series>
+      ]
+    });
+    chartb1.render(); // </chart>
+    // <chart>
+    var chartb2 = new CanvasJS.Chart("chartContainerb2",
+    {
+      title:{
+        text: "Data Received",
+      },
+      data: [
+      {// <series>
+        type: "column",
+        showInLegend: "true",
+        legendText: "MB Received",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 43840/1048576 },
+        { x: new Date(2013, 04, 28), y: 81037/1048576 },
+        { x: new Date(2013, 04, 29), y: 58387/1048576 },
+        { x: new Date(2013, 04, 30), y: 399244/1048576 },
+        { x: new Date(2013, 04, 31), y: 632911/1048576 },
+        { x: new Date(2013, 05, 01), y: 3841201/1048576 },
+        { x: new Date(2013, 05, 02), y: 4561361/1048576 , indexLabel: "highest"},
+        { x: new Date(2013, 05, 03), y: 212388/1048576 },
+        { x: new Date(2013, 05, 04), y: 708781/1048576 },
+        { x: new Date(2013, 05, 05), y: 413123/1048576 },
+        { x: new Date(2013, 05, 06), y: 79538/1048576 },
+        { x: new Date(2013, 05, 07), y: 292246/1048576 },
+        { x: new Date(2013, 05, 08), y: 12779/1048576 },
+        { x: new Date(2013, 05, 09), y: 283304/1048576 },
+        { x: new Date(2013, 05, 10), y: 1429734/1048576 },
+        { x: new Date(2013, 05, 11), y: 13938/1048576 },
+        { x: new Date(2013, 05, 12), y: 26834/1048576 },
+        { x: new Date(2013, 05, 13), y: 747549/1048576 },
+        { x: new Date(2013, 05, 14), y: 53776/1048576 },
+        ]
+      }, // </series>
+      ]
+    });
+    chartb2.render(); // </chart>
+    // <chart>
+    var chartc1 = new CanvasJS.Chart("chartContainerc1",
+    {
+      title:{
+        text: "Event Counts",
+      },
+      data: [
+      {// <series>
+        type: "line",
+        showInLegend: "true",
+        markerType: "circle",
+        legendText: "Events",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 722 },
+        { x: new Date(2013, 04, 28), y: 2065 },
+        { x: new Date(2013, 04, 29), y: 1907 },
+        { x: new Date(2013, 04, 30), y: 5674 },
+        { x: new Date(2013, 04, 31), y: 6375 },
+        { x: new Date(2013, 05, 01), y: 54516 },
+        { x: new Date(2013, 05, 02), y: 58636, indexLabel: "highest" },
+        { x: new Date(2013, 05, 03), y: 15336 },
+        { x: new Date(2013, 05, 04), y: 10756 },
+        { x: new Date(2013, 05, 05), y: 6058 },
+        { x: new Date(2013, 05, 06), y: 2920 },
+        { x: new Date(2013, 05, 07), y: 6454 },
+        { x: new Date(2013, 05, 08), y: 184 },
+        { x: new Date(2013, 05, 09), y: 1186 },
+        { x: new Date(2013, 05, 10), y: 20165 },
+        { x: new Date(2013, 05, 11), y: 116 },
+        { x: new Date(2013, 05, 12), y: 1398 },
+        { x: new Date(2013, 05, 13), y: 10777 },
+        { x: new Date(2013, 05, 14), y: 790 },
+        ]
+      }, // </series>
+      {// <series>
+        type: "line",
+        showInLegend: "true",
+        markerType: "circle",
+        legendText: "Login Failed for root",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 221 },
+        { x: new Date(2013, 04, 28), y: 117 },
+        { x: new Date(2013, 04, 29), y: 174 },
+        { x: new Date(2013, 04, 30), y: 926 },
+        { x: new Date(2013, 04, 31), y: 47 },
+        { x: new Date(2013, 05, 01), y: 2618 },
+        { x: new Date(2013, 05, 02), y: 20614, indexLabel: "highest" },
+        { x: new Date(2013, 05, 03), y: 1198 },
+        { x: new Date(2013, 05, 04), y: 2055 },
+        { x: new Date(2013, 05, 05), y: 111 },
+        { x: new Date(2013, 05, 06), y: 757 },
+        { x: new Date(2013, 05, 07), y: 1263 },
+        { x: new Date(2013, 05, 08), y: 29 },
+        { x: new Date(2013, 05, 09), y: 334 },
+        { x: new Date(2013, 05, 10), y: 2629 },
+        { x: new Date(2013, 05, 11), y: 36 },
+        { x: new Date(2013, 05, 12), y: 351 },
+        { x: new Date(2013, 05, 13), y: 889 },
+        { x: new Date(2013, 05, 14), y: 201 },
+        ]
+      }, // </series>
+      ]
+    });
+    chartc1.render(); // </chart>
+    // <chart>
+    var chartc2 = new CanvasJS.Chart("chartContainerc2",
+    {
+      title:{
+        text: "Data Received",
+      },
+      data: [
+      {// <series>
+        type: "column",
+        showInLegend: "true",
+        legendText: "MB Received",
+        dataPoints: [
+        { x: new Date(2013, 04, 27), y: 47897/1048576 },
+        { x: new Date(2013, 04, 28), y: 152004/1048576 },
+        { x: new Date(2013, 04, 29), y: 133732/1048576 },
+        { x: new Date(2013, 04, 30), y: 402416/1048576 },
+        { x: new Date(2013, 04, 31), y: 471549/1048576 },
+        { x: new Date(2013, 05, 01), y: 3913370/1048576 },
+        { x: new Date(2013, 05, 02), y: 4575831/1048576, indexLabel: "highest" },
+        { x: new Date(2013, 05, 03), y: 1106947/1048576 },
+        { x: new Date(2013, 05, 04), y: 807181/1048576 },
+        { x: new Date(2013, 05, 05), y: 407470/1048576 },
+        { x: new Date(2013, 05, 06), y: 206157/1048576 },
+        { x: new Date(2013, 05, 07), y: 457998/1048576 },
+        { x: new Date(2013, 05, 08), y: 12999/1048576 },
+        { x: new Date(2013, 05, 09), y: 83503/1048576 },
+        { x: new Date(2013, 05, 10), y: 1436287/1048576 },
+        { x: new Date(2013, 05, 11), y: 8000/1048576 },
+        { x: new Date(2013, 05, 12), y: 93658/1048576 },
+        { x: new Date(2013, 05, 13), y: 785703/1048576 },
+        { x: new Date(2013, 05, 14), y: 53212/1048576 },
+        ]
+      }, // </series>
+      ]
+    });
+    chartc2.render(); // </chart>
+    }
+  </script>
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Log as a service</a></h1>
+            <h3>Log as a Service</h3>
+        </hgroup>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>                
+                <li><a href="explore.html">Explore Data</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+</div>
+
+<!-- content-wrap -->
+<div class="content-wrap">
+      <section id="dashboard1" class="clearfix">            
+            <div class="primary">
+                <h1>主機每日Log大小(Byte)</h1>
+                <br/>
+                <strong>來源主機：d23d6ee0</strong>
+                <div id="chartContainera2" style="height: 240px; width: 100%;"></div>
+
+                <br/><strong>來源主機：d24128b7</strong>
+                <div id="chartContainerb2" style="height: 240px; width: 100%;"></div>
+                <br/><strong>來源主機：d2412e8f</strong>
+                <div id="chartContainerc2" style="height: 240px; width: 100%;"></div>
+            </div>
+            <a class="back-to-top" href="#dashboard1">Back to Top</a>
+      </section>
+      
+</div>
+
+<div class="content-wrap">
+      <section id="dashboard2" class="clearfix">            
+            <div class="primary">
+                <h1>主機每日Log 數量</h1>
+                <br/><strong>來源主機：d23d6ee0</strong>
+                <div id="chartContainera1" style="height: 240px; width: 100%;"></div>
+                <br/><strong>來源主機：d24128b7</strong>
+                <div id="chartContainerb1" style="height: 240px; width: 100%;"></div>
+                <br/><strong>來源主機：d2412e8f</strong>
+                <div id="chartContainerc1" style="height: 240px; width: 100%;"></div>  
+            </div>
+             <a class="back-to-top" href="#dashboard1">Back to Top</a>
+      </section>     
+</div>
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+         <p class="footer-text">Copyright chunghwa telecom. &nbsp;&nbsp;&nbsp; Designed by Team1 (leoricklin,iceC,bradcheng,yiyao,ylju)</p>
+    </div>
+
+</footer>
+
+</body>
+</html>

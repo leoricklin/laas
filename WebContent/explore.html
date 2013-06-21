@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
+
+<head>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Logging as a Service</title>
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" />
+
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script src="js/jquery-1.6.1.min.js"></script>
+
+</head>
+
+<body>
+
+<!-- header-wrap -->
+<div id="header-wrap">
+    <header>
+
+        <hgroup>
+            <h1><a href="index.html">Log as a service</a></h1>
+            <h3>Log as a Service</h3>
+        </hgroup>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="service.html">Services</a></li>                
+                <li><a href="explore.html">Explore Data</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+
+    </header>
+</div>
+
+<!-- content-wrap -->
+<div class="content-wrap">
+
+
+      <section id="contact" class="clearfix">
+
+            <h1>瀏覽您的日誌資料</h1>
+            <div class="primary">   
+                <form method="get" action="querylog.jsp" name="queryform">
+                    <div>
+                    <label>1.Select Log Type <span class="required">*</span></label>
+                    <select multiple="multiple" size="1" name="logtypelist">
+                        <option value="syslog">Syslog</option>
+                        <option value="apachelog">Apache Web Log</option>
+                        <option value="log4j">Log4j</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label>2.Select Log Host <span class="required">*</span></label>
+                    <select multiple="multiple" size="1" name="loghostlist">
+                        <option selected value="d23d6ee0">d23d6ee0</option>
+                        <option value="d24128b7">d24128b7</option>
+                        <option value="d2412e8f">d2412e8f</option>
+                    </select>
+                    </div>
+
+                    <div>
+                    <label>3.Select Time Range</label>
+                    start:<input type="text" id="dtstart" name="dtstart" value="2013/05/27">
+                    end:<input type="text" id="dtend"  name="dtend" value="2013/05/28">
+                    </div>
+
+                  
+                    <div>
+					<input type="submit"  value="Submit" class="button">
+         			<input type="reset" value="Reset" class="button">
+					</div>
+
+
+                </form>
+
+            </div>
+
+            <aside>
+
+                    <h2>步驟說明</h2>
+                    <dl >
+                        <dt>1. 選擇您要搜尋日誌類型</dt>
+                        <dd>本次專題實作三種類型:Syslog,ApacheLog,Log4J</dd>
+                        <dt>2.選擇您要搜尋的主機</dt>
+                        <dd>本次專題實作蒐集來源包含三台hicloud主機</dd>
+                        <dt>3.選擇您要查詢的日期區間</dt>
+                        <dd>本次專題實作區間自2013/5/15開始</dd>
+                        <dt>4.送出查詢</dt>
+                    </ul>
+
+            </aside>
+     </section>
+
+</div>
+
+<!-- footer -->
+<footer>
+    <div class="footer-content">
+        <ul class="footer-menu">
+            <li><a href="#main">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#about-us">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <!-- <li class="rss-feed"><a href="#">RSS Feed</a></li> -->
+        </ul>
+
+        <p class="footer-text">Copyright chunghwa telecom. &nbsp;&nbsp;&nbsp; Designed by Team1 (leoricklin,iceC,bradcheng,yiyao,ylju)</p>
+    </div>
+
+</footer>
+
+</body>
+</html>
