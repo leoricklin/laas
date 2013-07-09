@@ -11,6 +11,7 @@ public class Syslog {
 	public static final String K_HOST = "host";
 	public static final String K_SEVERITY = "Severity";
 	public static final String K_TMSTAMP = "timestamp";
+   public static final String K_ROWKEY = "RK";
 
 	public Syslog() {
 		this.map = new HashMap<String, String>();
@@ -25,6 +26,17 @@ public class Syslog {
 		this.map.put(Syslog.K_TMSTAMP, tmstamp);		
 	}
 
+	public Syslog(String rowkey, String agent, String body, String facility, String host, String severity, String tmstamp){
+      this(agent, body, facility, host, severity, tmstamp);
+      this.map.put(Syslog.K_ROWKEY, rowkey);
+   }
+
+   public String getRowkey() {
+      return this.map.get(Syslog.K_ROWKEY);
+   }
+   public void setRowkey(String rowkey) {
+      this.map.put(Syslog.K_ROWKEY, rowkey);
+   }
 	public String getAgent() {
 		return this.map.get(Syslog.K_AGENT);
 	}

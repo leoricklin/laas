@@ -14,13 +14,21 @@
     <title>Logging as a Service</title>
 
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-
+    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" />
 
     <!--[if lt IE 9]>
 	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    
-    <script src="js/jquery-1.6.1.min.js"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
+
+    <script src="js/jquery.smoothscroll.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
+    <script src="js/jquery.easing-1.3.pack.js"></script>
+    <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
+    <script src="js/init.js"></script>
    <script type="text/javascript" src="js/canvasjs.min.js"></script>
    <script type="text/javascript">
    window.onload = function () {
@@ -42,7 +50,7 @@
         { x: new Date(2013, 04, 29), y: 13630 },
         { x: new Date(2013, 04, 30), y: 13630 },
         { x: new Date(2013, 04, 31), y: 46280 },
-        { x: new Date(2013, 05, 01), y: 64260, indexLabel: "highest" },
+        { x: new Date(2013, 05, 01), y: 64260 },
         { x: new Date(2013, 05, 02), y: 13462 },
         { x: new Date(2013, 05, 03), y: 18991 },
         { x: new Date(2013, 05, 04), y: 5765 },
@@ -69,7 +77,7 @@
         { x: new Date(2013, 04, 29), y: 2205 },
         { x: new Date(2013, 04, 30), y: 934 },
         { x: new Date(2013, 04, 31), y: 5181 },
-        { x: new Date(2013, 05, 01), y: 17185, indexLabel: "highest" },
+        { x: new Date(2013, 05, 01), y: 17185 },
         { x: new Date(2013, 05, 02), y: 4214 },
         { x: new Date(2013, 05, 03), y: 1740 },
         { x: new Date(2013, 05, 04), y: 883 },
@@ -105,7 +113,7 @@
         { x: new Date(2013, 04, 29), y: 960267/1048576 },
         { x: new Date(2013, 04, 30), y: 717958/1048576 },
         { x: new Date(2013, 04, 31), y: 3362935/1048576 },
-        { x: new Date(2013, 05, 01), y: 4741689/1048576, indexLabel: "highest" },
+        { x: new Date(2013, 05, 01), y: 4741689/1048576 },
         { x: new Date(2013, 05, 02), y: 909553/1048576 },
         { x: new Date(2013, 05, 03), y: 1371719/1048576 },
         { x: new Date(2013, 05, 04), y: 411588/1048576 },
@@ -143,7 +151,7 @@
         { x: new Date(2013, 04, 30), y: 5678 },
         { x: new Date(2013, 04, 31), y: 8638 },
         { x: new Date(2013, 05, 01), y: 53636 },
-        { x: new Date(2013, 05, 02), y: 58666, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 58666 },
         { x: new Date(2013, 05, 03), y: 3084 },
         { x: new Date(2013, 05, 04), y: 9703 },
         { x: new Date(2013, 05, 05), y: 6110 },
@@ -170,7 +178,7 @@
         { x: new Date(2013, 04, 30), y: 923 },
         { x: new Date(2013, 04, 31), y: 441 },
         { x: new Date(2013, 05, 01), y: 2608 },
-        { x: new Date(2013, 05, 02), y: 20728, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 20728 },
         { x: new Date(2013, 05, 03), y: 624 },
         { x: new Date(2013, 05, 04), y: 1452 },
         { x: new Date(2013, 05, 05), y: 111 },
@@ -206,7 +214,7 @@
         { x: new Date(2013, 04, 30), y: 399244/1048576 },
         { x: new Date(2013, 04, 31), y: 632911/1048576 },
         { x: new Date(2013, 05, 01), y: 3841201/1048576 },
-        { x: new Date(2013, 05, 02), y: 4561361/1048576 , indexLabel: "highest"},
+        { x: new Date(2013, 05, 02), y: 4561361/1048576 },
         { x: new Date(2013, 05, 03), y: 212388/1048576 },
         { x: new Date(2013, 05, 04), y: 708781/1048576 },
         { x: new Date(2013, 05, 05), y: 413123/1048576 },
@@ -243,7 +251,7 @@
         { x: new Date(2013, 04, 30), y: 5674 },
         { x: new Date(2013, 04, 31), y: 6375 },
         { x: new Date(2013, 05, 01), y: 54516 },
-        { x: new Date(2013, 05, 02), y: 58636, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 58636 },
         { x: new Date(2013, 05, 03), y: 15336 },
         { x: new Date(2013, 05, 04), y: 10756 },
         { x: new Date(2013, 05, 05), y: 6058 },
@@ -270,7 +278,7 @@
         { x: new Date(2013, 04, 30), y: 926 },
         { x: new Date(2013, 04, 31), y: 47 },
         { x: new Date(2013, 05, 01), y: 2618 },
-        { x: new Date(2013, 05, 02), y: 20614, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 20614 },
         { x: new Date(2013, 05, 03), y: 1198 },
         { x: new Date(2013, 05, 04), y: 2055 },
         { x: new Date(2013, 05, 05), y: 111 },
@@ -306,7 +314,7 @@
         { x: new Date(2013, 04, 30), y: 402416/1048576 },
         { x: new Date(2013, 04, 31), y: 471549/1048576 },
         { x: new Date(2013, 05, 01), y: 3913370/1048576 },
-        { x: new Date(2013, 05, 02), y: 4575831/1048576, indexLabel: "highest" },
+        { x: new Date(2013, 05, 02), y: 4575831/1048576 },
         { x: new Date(2013, 05, 03), y: 1106947/1048576 },
         { x: new Date(2013, 05, 04), y: 807181/1048576 },
         { x: new Date(2013, 05, 05), y: 407470/1048576 },
@@ -355,37 +363,66 @@
 
 <!-- content-wrap -->
 <div class="content-wrap">
-      <section id="dashboard1" class="clearfix">            
+      <section id="dashboard" class="clearfix">
+            <h1>儀表板</h1>
             <div class="primary">
-                <h1>主機每日Log大小(Byte)</h1>
-                <br/>
-                <strong>來源主機：d23d6ee0</strong>
-                <div id="chartContainera2" style="height: 240px; width: 100%;"></div>
-
-                <br/><strong>來源主機：d24128b7</strong>
-                <div id="chartContainerb2" style="height: 240px; width: 100%;"></div>
-                <br/><strong>來源主機：d2412e8f</strong>
-                <div id="chartContainerc2" style="height: 240px; width: 100%;"></div>
+                <h2>各主機每日Log數量</h2>
             </div>
-            <a class="back-to-top" href="#dashboard1">Back to Top</a>
       </section>
-      
 </div>
 
-<div class="content-wrap">
-      <section id="dashboard2" class="clearfix">            
-            <div class="primary">
-                <h1>主機每日Log 數量</h1>
-                <br/><strong>來源主機：d23d6ee0</strong>
-                <div id="chartContainera1" style="height: 240px; width: 100%;"></div>
-                <br/><strong>來源主機：d24128b7</strong>
-                <div id="chartContainerb1" style="height: 240px; width: 100%;"></div>
-                <br/><strong>來源主機：d2412e8f</strong>
-                <div id="chartContainerc1" style="height: 240px; width: 100%;"></div>  
-            </div>
-             <a class="back-to-top" href="#dashboard1">Back to Top</a>
-      </section>     
-</div>
+   <style>
+     table 
+     {
+       border: 2px black solid;
+     }
+     td
+     {
+       border: 2px black solid;
+     }
+   </style>
+   <table width="90%" border="1" cellspacing="0" cellpadding="2" align="center" style="">
+   <thead>
+     <tr>
+       <th colspan="2">d23d6ee0</th>
+     </tr>
+   </thead>
+     <tr>
+       <td width="48%">
+         <div id="chartContainera2" style="height: 240px; width: 100%;"></div>
+       </td>
+       <td width="48%">
+         <div id="chartContainera1" style="height: 240px; width: 100%;"></div>
+       </td>
+     </tr>
+   <thead>
+     <tr>
+       <th colspan="2">d24128b7</th>
+     </tr>
+   </thead>
+     <tr>
+       <td width="48%">
+         <div id="chartContainerb2" style="height: 240px; width: 100%;"></div>
+       </td>
+       <td width="48%">
+         <div id="chartContainerb1" style="height: 240px; width: 100%;"></div>
+       </td>
+     </tr>
+   <thead>
+     <tr>
+       <th colspan="2">d2412e8f</th>
+     </tr>
+   </thead>
+     <tr>
+       <td width="48%">
+         <div id="chartContainerc2" style="height: 240px; width: 100%;"></div>
+       </td>
+       <td width="48%">
+         <div id="chartContainerc1" style="height: 240px; width: 100%;"></div>
+       </td>
+     </tr>
+   </table>
+
 <!-- footer -->
 <footer>
     <div class="footer-content">

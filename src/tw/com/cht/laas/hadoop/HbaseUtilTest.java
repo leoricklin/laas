@@ -24,8 +24,8 @@ public class HbaseUtilTest {
 	@Test
 	public void testGetLog() throws IOException {
 		String [] hosts = {"0a90818c"};
-		long dtStart = 20130529000000L;
-		long dtEnd = 20130529235959L;
+		long dtStart = 0000000000000L;
+		long dtEnd = 9999999999999L;
 		List<Syslog> syslogs = HbaseUtil.getLog(hosts, dtStart, dtEnd);
 		for(Syslog syslog:syslogs) {
 			System.out.println(syslog);

@@ -2,6 +2,7 @@
 <%@ page import ="java.util.*"%>
 <%@ page import ="java.text.*"%>
 <%@ page import ="tw.com.cht.laas.entity.*"%>
+<%@ page import ="tw.com.cht.laas.model.*"%>
 <!DOCTYPE html>
 <!--[if IE 7 ]>    <html class="ie7 oldie"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie8 oldie"> <![endif]-->
@@ -20,7 +21,7 @@
    <link rel="stylesheet" href="css/dataTables.css" type="text/css" media="screen" />
 
     <!--[if lt IE 9]>
-	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <script src="js/jquery-1.6.1.min.js"></script>
@@ -34,17 +35,17 @@
 
 <body>
 <%! 
+QueryModel model = null;
 StringBuffer stb = null;
 String str = null;
 Date dt = null;
-final DateFormat dtformat = new SimpleDateFormat("yyyy/MM/dd");
 final DateFormat tmformat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 %>
-<jsp:useBean id="model" class="tw.com.cht.laas.model.QueryModel" scope="page"/>
 <% 
+model = new QueryModel();
 try {
-   model.setDtStart(dtformat.parse(request.getParameter("dtstart")).getTime());
-   model.setDtEnd(dtformat.parse(request.getParameter("dtend")).getTime());
+   model.setDtStart(tmformat.parse(request.getParameter("dtstart")+" 00:00:00").getTime());
+   model.setDtEnd(tmformat.parse(request.getParameter("dtend")+" 23:59:59").getTime());
    model.setHosts(request.getParameterValues("loghostlist"));
 } catch (ParseException e) {
    e.printStackTrace();
@@ -54,11 +55,11 @@ try {
 dt = new Date();
 dt.setTime(model.getDtStart());
 %>
-<input type="hidden" value="<%=dtformat.format(dt) %>>" name="dtStart"><br>
+<input type="hidden" value="<%=tmformat.format(dt) %>>" name="dtStart"><br>
 <%
 dt.setTime(model.getDtEnd());
 %>
-<input type="hidden" value="<%=dtformat.format(dt) %>>" name="dtEnd"><br>
+<input type="hidden" value="<%=tmformat.format(dt) %>>" name="dtEnd"><br>
 <%
 stb = new StringBuffer();
 for(String host:model.getHosts()) {
@@ -105,7 +106,7 @@ List<Syslog> syslogs = model.getSyslogs();
                         </tr>
                     </thead>
 <%
-if (syslogs.size()>0) {
+if (syslogs !=null && syslogs.size()>0) {
 %>
                     <tbody>
 <%
@@ -114,9 +115,9 @@ if (syslogs.size()>0) {
 %>
         <tr>
             <td style="width:150px;"><%=tmformat.format(dt) %></td>
-            <td><%=syslog.getHost() %></td>
-            <td><%=syslog.getFacility() %></td>
-            <td><%=syslog.getSeverity() %></td>
+            <td><%=(syslog.getHost()!=null)?(syslog.getHost()):("") %></td>
+            <td><%=(syslog.getFacility()!=null)?(syslog.getFacility()):("") %></td>
+            <td><%=(syslog.getSeverity()!=null)?(syslog.getSeverity()):("") %></td>
             <td style="text-align: left;"><%=syslog.getBody() %></td>
         </tr>
 <%      
