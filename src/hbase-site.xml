@@ -25,7 +25,7 @@
 <configuration>
   <property>
     <name>hbase.rootdir</name>
-    <value>hdfs://0a908189.cht.local:8020/hbase</value>
+    <value>hdfs://d241288b.cht.local:8020/hbase</value>
     <description>The directory shared by region servers.</description>
   </property>
 
@@ -91,7 +91,7 @@
 
   <property>
     <name>hbase.zookeeper.quorum</name>
-    <value>0a908189.cht.local</value>
+    <value>d241288b.cht.local</value>
     <description>Comma separated list of servers in the ZooKeeper Quorum.
       For example, "host1.mydomain.com,host2.mydomain.com,host3.mydomain.com".
       By default this is set to localhost for local and pseudo-distributed modes

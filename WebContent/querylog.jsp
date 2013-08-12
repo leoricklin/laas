@@ -9,7 +9,7 @@
 <!--[if IE 9 ]>    <html class="ie9"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html> <!--<![endif]-->
 <head>
-
+   <meta http-equiv="Content-Type" content="text/html; charset=BIG5">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta charset="utf-8"/>
     <meta name="description" content="">
@@ -82,6 +82,8 @@ List<Syslog> syslogs = model.getSyslogs();
                 <li><a href="index.html">Home</a></li>
                 <li><a href="service.html">Services</a></li>                
                 <li><a href="explore.html">Explore Data</a></li>
+                <li><a href="alertconn.jsp">DOS Attack Alert</a></li>
+                <li><a href="alertblacklist.jsp">Blacklist Login Alert</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="#login">Login</a></li>

@@ -6,9 +6,11 @@ public interface IAlert extends Runnable {
       RUNNING,
       TERMINATED
    }
+   public final String RUN_FLAG_ON = "true";
+   public final String RUN_FLAG_OFF = "false";
    public boolean initialize();
    public boolean terminate();
    public boolean reload();
-   public boolean check(Object obj);
+   public boolean check();
    public IAlert.STATUS getStatus();
 }

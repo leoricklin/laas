@@ -14,21 +14,13 @@
     <title>Logging as a Service</title>
 
     <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="css/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="css/jquery.fancybox-1.3.4.css" type="text/css" />
+
 
     <!--[if lt IE 9]>
 	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.6.1.min.js"><\/script>')</script>
-
-    <script src="js/jquery.smoothscroll.js"></script>
-    <script src="js/jquery.nivo.slider.pack.js"></script>
-    <script src="js/jquery.easing-1.3.pack.js"></script>
-    <script src="js/jquery.fancybox-1.3.4.pack.js"></script>
-    <script src="js/init.js"></script>
+    
+    <script src="js/jquery-1.6.1.min.js"></script>
    <script type="text/javascript" src="js/canvasjs.min.js"></script>
    <script type="text/javascript">
    window.onload = function () {
@@ -50,7 +42,7 @@
         { x: new Date(2013, 04, 29), y: 13630 },
         { x: new Date(2013, 04, 30), y: 13630 },
         { x: new Date(2013, 04, 31), y: 46280 },
-        { x: new Date(2013, 05, 01), y: 64260 },
+        { x: new Date(2013, 05, 01), y: 64260, indexLabel: "highest" },
         { x: new Date(2013, 05, 02), y: 13462 },
         { x: new Date(2013, 05, 03), y: 18991 },
         { x: new Date(2013, 05, 04), y: 5765 },
@@ -64,6 +56,21 @@
         { x: new Date(2013, 05, 12), y: 1444 },
         { x: new Date(2013, 05, 13), y: 1935 },
         { x: new Date(2013, 05, 14), y: 783 },
+        { x: new Date(2013, 05, 15), y: 5244 },
+        { x: new Date(2013, 05, 16), y: 5196 },
+        { x: new Date(2013, 05, 17), y: 2315 },
+        { x: new Date(2013, 05, 18), y:  },
+        { x: new Date(2013, 05, 19), y:  },
+        { x: new Date(2013, 05, 20), y:  },
+        { x: new Date(2013, 05, 21), y:  },
+        { x: new Date(2013, 05, 22), y:  },
+        { x: new Date(2013, 05, 23), y:  },
+        { x: new Date(2013, 05, 24), y:  },
+        { x: new Date(2013, 05, 25), y:  },
+        { x: new Date(2013, 05, 26), y:  },
+        { x: new Date(2013, 05, 27), y:  },
+        { x: new Date(2013, 05, 28), y:  },
+        { x: new Date(2013, 05, 29), y:  },
         ]
       }, // </series>
       {// <series>
@@ -77,7 +84,7 @@
         { x: new Date(2013, 04, 29), y: 2205 },
         { x: new Date(2013, 04, 30), y: 934 },
         { x: new Date(2013, 04, 31), y: 5181 },
-        { x: new Date(2013, 05, 01), y: 17185 },
+        { x: new Date(2013, 05, 01), y: 17185, indexLabel: "highest" },
         { x: new Date(2013, 05, 02), y: 4214 },
         { x: new Date(2013, 05, 03), y: 1740 },
         { x: new Date(2013, 05, 04), y: 883 },
@@ -91,6 +98,21 @@
         { x: new Date(2013, 05, 12), y: 281 },
         { x: new Date(2013, 05, 13), y: 320 },
         { x: new Date(2013, 05, 14), y: 199 },
+        { x: new Date(2013, 05, 15), y: 589 },
+        { x: new Date(2013, 05, 16), y: 706 },
+        { x: new Date(2013, 05, 17), y: 438 },
+        { x: new Date(2013, 05, 18), y: 1 },
+        { x: new Date(2013, 05, 19), y: 543 },
+        { x: new Date(2013, 05, 20), y: 2308 },
+        { x: new Date(2013, 05, 21), y: 4 },
+        { x: new Date(2013, 05, 22), y: 15 },
+        { x: new Date(2013, 05, 23), y: 43 },
+        { x: new Date(2013, 05, 24), y: 516 },
+        { x: new Date(2013, 05, 25), y: 160 },
+        { x: new Date(2013, 05, 26), y: 14 },
+        { x: new Date(2013, 05, 27), y: 309 },
+        { x: new Date(2013, 05, 28), y: 1 },
+        { x: new Date(2013, 05, 29), y: 135 },
         ]
       }, // </series>
       ]
@@ -113,7 +135,7 @@
         { x: new Date(2013, 04, 29), y: 960267/1048576 },
         { x: new Date(2013, 04, 30), y: 717958/1048576 },
         { x: new Date(2013, 04, 31), y: 3362935/1048576 },
-        { x: new Date(2013, 05, 01), y: 4741689/1048576 },
+        { x: new Date(2013, 05, 01), y: 4741689/1048576, indexLabel: "highest" },
         { x: new Date(2013, 05, 02), y: 909553/1048576 },
         { x: new Date(2013, 05, 03), y: 1371719/1048576 },
         { x: new Date(2013, 05, 04), y: 411588/1048576 },
@@ -127,6 +149,21 @@
         { x: new Date(2013, 05, 12), y: 96904/1048576 },
         { x: new Date(2013, 05, 13), y: 135492/1048576 },
         { x: new Date(2013, 05, 14), y: 53742/1048576 },
+        { x: new Date(2013, 05, 15), y: 369187/1048576 },
+        { x: new Date(2013, 05, 16), y: 380596/1048576 },
+        { x: new Date(2013, 05, 17), y: 170580/1048576 },
+        { x: new Date(2013, 05, 18), y: /1048576 },
+        { x: new Date(2013, 05, 19), y: /1048576 },
+        { x: new Date(2013, 05, 20), y: /1048576 },
+        { x: new Date(2013, 05, 21), y: /1048576 },
+        { x: new Date(2013, 05, 22), y: /1048576 },
+        { x: new Date(2013, 05, 23), y: /1048576 },
+        { x: new Date(2013, 05, 24), y: /1048576 },
+        { x: new Date(2013, 05, 25), y: /1048576 },
+        { x: new Date(2013, 05, 26), y: /1048576 },
+        { x: new Date(2013, 05, 27), y: /1048576 },
+        { x: new Date(2013, 05, 28), y: /1048576 },
+        { x: new Date(2013, 05, 28), y: /1048576 },
         ]
       }, // </series>
       ]
@@ -151,7 +188,7 @@
         { x: new Date(2013, 04, 30), y: 5678 },
         { x: new Date(2013, 04, 31), y: 8638 },
         { x: new Date(2013, 05, 01), y: 53636 },
-        { x: new Date(2013, 05, 02), y: 58666 },
+        { x: new Date(2013, 05, 02), y: 58666, indexLabel: "highest" },
         { x: new Date(2013, 05, 03), y: 3084 },
         { x: new Date(2013, 05, 04), y: 9703 },
         { x: new Date(2013, 05, 05), y: 6110 },
@@ -164,6 +201,21 @@
         { x: new Date(2013, 05, 12), y: 408 },
         { x: new Date(2013, 05, 13), y: 10312 },
         { x: new Date(2013, 05, 14), y: 792 },
+        { x: new Date(2013, 05, 15), y:  },
+        { x: new Date(2013, 05, 16), y:  },
+        { x: new Date(2013, 05, 17), y:  },
+        { x: new Date(2013, 05, 18), y:  },
+        { x: new Date(2013, 05, 19), y:  },
+        { x: new Date(2013, 05, 20), y:  },
+        { x: new Date(2013, 05, 21), y:  },
+        { x: new Date(2013, 05, 22), y:  },
+        { x: new Date(2013, 05, 23), y:  },
+        { x: new Date(2013, 05, 24), y:  },
+        { x: new Date(2013, 05, 25), y:  },
+        { x: new Date(2013, 05, 26), y:  },
+        { x: new Date(2013, 05, 27), y:  },
+        { x: new Date(2013, 05, 28), y:  },
+        { x: new Date(2013, 05, 29), y:  },
         ]
       }, // </series>
       {// <series>
@@ -178,7 +230,7 @@
         { x: new Date(2013, 04, 30), y: 923 },
         { x: new Date(2013, 04, 31), y: 441 },
         { x: new Date(2013, 05, 01), y: 2608 },
-        { x: new Date(2013, 05, 02), y: 20728 },
+        { x: new Date(2013, 05, 02), y: 20728, indexLabel: "highest" },
         { x: new Date(2013, 05, 03), y: 624 },
         { x: new Date(2013, 05, 04), y: 1452 },
         { x: new Date(2013, 05, 05), y: 111 },
@@ -191,6 +243,21 @@
         { x: new Date(2013, 05, 12), y: 123 },
         { x: new Date(2013, 05, 13), y: 1051 },
         { x: new Date(2013, 05, 14), y: 199 },
+        { x: new Date(2013, 05, 15), y:  },
+        { x: new Date(2013, 05, 16), y:  },
+        { x: new Date(2013, 05, 17), y:  },
+        { x: new Date(2013, 05, 18), y:  },
+        { x: new Date(2013, 05, 19), y:  },
+        { x: new Date(2013, 05, 20), y:  },
+        { x: new Date(2013, 05, 21), y:  },
+        { x: new Date(2013, 05, 22), y:  },
+        { x: new Date(2013, 05, 23), y:  },
+        { x: new Date(2013, 05, 24), y:  },
+        { x: new Date(2013, 05, 25), y:  },
+        { x: new Date(2013, 05, 26), y:  },
+        { x: new Date(2013, 05, 27), y:  },
+        { x: new Date(2013, 05, 28), y:  },
+        { x: new Date(2013, 05, 29), y:  },
         ]
       }, // </series>
       ]
@@ -214,7 +281,7 @@
         { x: new Date(2013, 04, 30), y: 399244/1048576 },
         { x: new Date(2013, 04, 31), y: 632911/1048576 },
         { x: new Date(2013, 05, 01), y: 3841201/1048576 },
-        { x: new Date(2013, 05, 02), y: 4561361/1048576 },
+        { x: new Date(2013, 05, 02), y: 4561361/1048576 , indexLabel: "highest"},
         { x: new Date(2013, 05, 03), y: 212388/1048576 },
         { x: new Date(2013, 05, 04), y: 708781/1048576 },
         { x: new Date(2013, 05, 05), y: 413123/1048576 },
@@ -227,6 +294,20 @@
         { x: new Date(2013, 05, 12), y: 26834/1048576 },
         { x: new Date(2013, 05, 13), y: 747549/1048576 },
         { x: new Date(2013, 05, 14), y: 53776/1048576 },
+        { x: new Date(2013, 05, 16), y: /1048576 },
+        { x: new Date(2013, 05, 17), y: /1048576 },
+        { x: new Date(2013, 05, 18), y: /1048576 },
+        { x: new Date(2013, 05, 19), y: /1048576 },
+        { x: new Date(2013, 05, 20), y: /1048576 },
+        { x: new Date(2013, 05, 21), y: /1048576 },
+        { x: new Date(2013, 05, 22), y: /1048576 },
+        { x: new Date(2013, 05, 23), y: /1048576 },
+        { x: new Date(2013, 05, 24), y: /1048576 },
+        { x: new Date(2013, 05, 25), y: /1048576 },
+        { x: new Date(2013, 05, 26), y: /1048576 },
+        { x: new Date(2013, 05, 27), y: /1048576 },
+        { x: new Date(2013, 05, 28), y: /1048576 },
+        { x: new Date(2013, 05, 29), y: /1048576 },
         ]
       }, // </series>
       ]
@@ -251,7 +332,7 @@
         { x: new Date(2013, 04, 30), y: 5674 },
         { x: new Date(2013, 04, 31), y: 6375 },
         { x: new Date(2013, 05, 01), y: 54516 },
-        { x: new Date(2013, 05, 02), y: 58636 },
+        { x: new Date(2013, 05, 02), y: 58636, indexLabel: "highest" },
         { x: new Date(2013, 05, 03), y: 15336 },
         { x: new Date(2013, 05, 04), y: 10756 },
         { x: new Date(2013, 05, 05), y: 6058 },
@@ -264,6 +345,21 @@
         { x: new Date(2013, 05, 12), y: 1398 },
         { x: new Date(2013, 05, 13), y: 10777 },
         { x: new Date(2013, 05, 14), y: 790 },
+        { x: new Date(2013, 05, 15), y:  },
+        { x: new Date(2013, 05, 16), y:  },
+        { x: new Date(2013, 05, 17), y:  },
+        { x: new Date(2013, 05, 18), y:  },
+        { x: new Date(2013, 05, 19), y:  },
+        { x: new Date(2013, 05, 20), y:  },
+        { x: new Date(2013, 05, 21), y:  },
+        { x: new Date(2013, 05, 22), y:  },
+        { x: new Date(2013, 05, 23), y:  },
+        { x: new Date(2013, 05, 24), y:  },
+        { x: new Date(2013, 05, 25), y:  },
+        { x: new Date(2013, 05, 26), y:  },
+        { x: new Date(2013, 05, 27), y:  },
+        { x: new Date(2013, 05, 28), y:  },
+        { x: new Date(2013, 05, 29), y:  },
         ]
       }, // </series>
       {// <series>
@@ -278,7 +374,7 @@
         { x: new Date(2013, 04, 30), y: 926 },
         { x: new Date(2013, 04, 31), y: 47 },
         { x: new Date(2013, 05, 01), y: 2618 },
-        { x: new Date(2013, 05, 02), y: 20614 },
+        { x: new Date(2013, 05, 02), y: 20614, indexLabel: "highest" },
         { x: new Date(2013, 05, 03), y: 1198 },
         { x: new Date(2013, 05, 04), y: 2055 },
         { x: new Date(2013, 05, 05), y: 111 },
@@ -291,6 +387,22 @@
         { x: new Date(2013, 05, 12), y: 351 },
         { x: new Date(2013, 05, 13), y: 889 },
         { x: new Date(2013, 05, 14), y: 201 },
+        { x: new Date(2013, 05, 15), y: 269 },
+        { x: new Date(2013, 05, 16), y: 566 },
+        { x: new Date(2013, 05, 17), y: 455 },
+        { x: new Date(2013, 05, 18), y: 0 },
+        { x: new Date(2013, 05, 19), y: 0 },
+        { x: new Date(2013, 05, 20), y: 1265 },
+        { x: new Date(2013, 05, 21), y: 6 },
+        { x: new Date(2013, 05, 22), y: 15 },
+        { x: new Date(2013, 05, 23), y: 80 },
+        { x: new Date(2013, 05, 24), y: 517 },
+        { x: new Date(2013, 05, 25), y: 0 },
+        { x: new Date(2013, 05, 26), y: 234 },
+        { x: new Date(2013, 05, 27), y: 771 },
+        { x: new Date(2013, 05, 28), y: 0 },
+        { x: new Date(2013, 05, 29), y: 5 },
+        { x: new Date(2013, 05, 30), y: 493 },
         ]
       }, // </series>
       ]
@@ -314,7 +426,7 @@
         { x: new Date(2013, 04, 30), y: 402416/1048576 },
         { x: new Date(2013, 04, 31), y: 471549/1048576 },
         { x: new Date(2013, 05, 01), y: 3913370/1048576 },
-        { x: new Date(2013, 05, 02), y: 4575831/1048576 },
+        { x: new Date(2013, 05, 02), y: 4575831/1048576, indexLabel: "highest" },
         { x: new Date(2013, 05, 03), y: 1106947/1048576 },
         { x: new Date(2013, 05, 04), y: 807181/1048576 },
         { x: new Date(2013, 05, 05), y: 407470/1048576 },
@@ -327,6 +439,20 @@
         { x: new Date(2013, 05, 12), y: 93658/1048576 },
         { x: new Date(2013, 05, 13), y: 785703/1048576 },
         { x: new Date(2013, 05, 14), y: 53212/1048576 },
+        { x: new Date(2013, 05, 16), y: /1048576 },
+        { x: new Date(2013, 05, 17), y: /1048576 },
+        { x: new Date(2013, 05, 18), y: /1048576 },
+        { x: new Date(2013, 05, 19), y: /1048576 },
+        { x: new Date(2013, 05, 20), y: /1048576 },
+        { x: new Date(2013, 05, 21), y: /1048576 },
+        { x: new Date(2013, 05, 22), y: /1048576 },
+        { x: new Date(2013, 05, 23), y: /1048576 },
+        { x: new Date(2013, 05, 24), y: /1048576 },
+        { x: new Date(2013, 05, 25), y: /1048576 },
+        { x: new Date(2013, 05, 26), y: /1048576 },
+        { x: new Date(2013, 05, 27), y: /1048576 },
+        { x: new Date(2013, 05, 28), y: /1048576 },
+        { x: new Date(2013, 05, 29), y: /1048576 },
         ]
       }, // </series>
       ]
@@ -352,6 +478,8 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="service.html">Services</a></li>                
                 <li><a href="explore.html">Explore Data</a></li>
+                <li><a href="alertconn.jsp">DOS Attack Alert</a></li>
+                <li><a href="alertblacklist.jsp">Blacklist Login Alert</a></li>
                 <li><a href="dashboard.html">Dashboard</a></li>
                 <li><a href="aboutus.html">About Us</a></li>
                 <li><a href="#login">Login</a></li>
@@ -363,66 +491,37 @@
 
 <!-- content-wrap -->
 <div class="content-wrap">
-      <section id="dashboard" class="clearfix">
-            <h1>儀表板</h1>
+      <section id="dashboard1" class="clearfix">            
             <div class="primary">
-                <h2>各主機每日Log數量</h2>
+                <h1>主機每日Log大小(Byte)</h1>
+                <br/>
+                <strong>來源主機：d23d6ee0</strong>
+                <div id="chartContainera2" style="height: 240px; width: 100%;"></div>
+
+                <br/><strong>來源主機：d24128b7</strong>
+                <div id="chartContainerb2" style="height: 240px; width: 100%;"></div>
+                <br/><strong>來源主機：d2412e8f</strong>
+                <div id="chartContainerc2" style="height: 240px; width: 100%;"></div>
             </div>
+            <a class="back-to-top" href="#dashboard1">Back to Top</a>
       </section>
+      
 </div>
 
-   <style>
-     table 
-     {
-       border: 2px black solid;
-     }
-     td
-     {
-       border: 2px black solid;
-     }
-   </style>
-   <table width="90%" border="1" cellspacing="0" cellpadding="2" align="center" style="">
-   <thead>
-     <tr>
-       <th colspan="2">d23d6ee0</th>
-     </tr>
-   </thead>
-     <tr>
-       <td width="48%">
-         <div id="chartContainera2" style="height: 240px; width: 100%;"></div>
-       </td>
-       <td width="48%">
-         <div id="chartContainera1" style="height: 240px; width: 100%;"></div>
-       </td>
-     </tr>
-   <thead>
-     <tr>
-       <th colspan="2">d24128b7</th>
-     </tr>
-   </thead>
-     <tr>
-       <td width="48%">
-         <div id="chartContainerb2" style="height: 240px; width: 100%;"></div>
-       </td>
-       <td width="48%">
-         <div id="chartContainerb1" style="height: 240px; width: 100%;"></div>
-       </td>
-     </tr>
-   <thead>
-     <tr>
-       <th colspan="2">d2412e8f</th>
-     </tr>
-   </thead>
-     <tr>
-       <td width="48%">
-         <div id="chartContainerc2" style="height: 240px; width: 100%;"></div>
-       </td>
-       <td width="48%">
-         <div id="chartContainerc1" style="height: 240px; width: 100%;"></div>
-       </td>
-     </tr>
-   </table>
-
+<div class="content-wrap">
+      <section id="dashboard2" class="clearfix">            
+            <div class="primary">
+                <h1>主機每日Log 數量</h1>
+                <br/><strong>來源主機：d23d6ee0</strong>
+                <div id="chartContainera1" style="height: 240px; width: 100%;"></div>
+                <br/><strong>來源主機：d24128b7</strong>
+                <div id="chartContainerb1" style="height: 240px; width: 100%;"></div>
+                <br/><strong>來源主機：d2412e8f</strong>
+                <div id="chartContainerc1" style="height: 240px; width: 100%;"></div>  
+            </div>
+             <a class="back-to-top" href="#dashboard1">Back to Top</a>
+      </section>     
+</div>
 <!-- footer -->
 <footer>
     <div class="footer-content">
